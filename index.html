@@ -4,15 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>to-do</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <section id="first-section">
     <div id="menu-container">
         <div id="menu-bar">
             <h3>Menu</h3>
             <img src="./menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="menu-icon">
         </div>
+        <div id="search-bar">
+            <input type="text">
+            <img src="./search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+        </div>
+        <div id="task-container">
+            <span>Tasks</span>
+            <div>
+                <div id="upcoming-item">
+                    <div>
+                    <img src="./double_arrow_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                    <span>Upcoming</span>
+                    </div>
+                    <span id="count-upcoming">12</span>
+                </div>
+                <div id="today-item">
+                    <div>
+                    <img src="./today_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                    <span>Upcoming</span>
+                    </div>
+                    <span id="count-today">12</span>
+                </div>
+                <div id="calender-item">
+                    <div>
+                    <img src="./calendar_month_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                    <span>Calender</span>
+                    </div>
+                </div>
+                <div id="stickynote-item">
+                    <div>
+                    <img src="./sticky_note_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                    <span>Sticky note</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Category-container">
+            <span>Category</span>
+            <div id="personal-item">
+                <div>
+                <img src="./double_arrow_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                <span>Personal</span>
+                </div>
+                <span id="count-personal">8</span>
+            </div>
+            <div id="work-item">
+                <div>
+                <img src="./today_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                <span>Work</span>
+                </div>
+                <span id="count-work">3</span>
+            </div>
+            <button id="add-category">+ Add Category</button>
+        </div>
     </div>
-    <div></div>
-    <div></div>
+    <div>
+        <div id="settings">
+            <img src="./logout_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+            <span>SETTINGS</span>
+        </div>
+        <div id="log-out">
+            <img src="./logout_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+            <span >LOG-OUT</span>
+        </div>
+    </div>
+</section>
+<section id="second-section">
+    <div id="today">
+        <h3>Today</h3>
+        <div><span>3/6 Task Pending</span></div>
+        <button id="add-category">+ Create Task </button>
+        <div id="task-list-container">
+            <label for="list-item1" >
+                <input id="list-check1"type="checkbox"/>
+                <span id="list-span1">Take my dog to the veternary</span>
+                <img src="./chevron_right_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+            </label>
+            <label for="list-item2" >
+                <input id="list-check2"type="checkbox"/>
+                <span id="list-span2">Take my dog to the veternary</span>
+                <img src="./chevron_right_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+            </label>
+            <label for="list-item3" >
+                <input id="list-check3"type="checkbox"/>
+                <span id="list-span3">Run around the school</span>
+                <img src="./chevron_right_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+            </label>
+        </div>
+    </div>
+</section>
+<section id="third-section">
+    <h3>Task </h3>
+    <div id="task-description">
+        <div id="task-title"><span>Take my dog to the veternary</span></div>
+        <div>
+            <span>Description</span>
+            <textarea id="description-input"></textarea>
+        </div>
+        <div>
+            <span>Category</span>
+            <select>
+                <option value="1">personal</option>
+            </select>
+        </div>
+        <div>
+            <span>Due Date</span>
+            <select>
+                <option value="1"><input type="date"></option>
+            </select>
+        </div>
+        <div>
+            <span>Prioty</span>
+            <select>
+                <option value="1">High</option>
+                <option value="2">Low</option>
+                <option value="3">Normal</option>
+            </select>
+        </div>
+        <div id="sub-task container">
+            <span>SubTasks</span>
+            <div>
+                <button id="add-category">+ Create Task </button>
+                <label for="list-item2" >
+                <input id="list-check2"type="checkbox"/>
+                <span id="list-span2">Take my dog to the veternary</span>
+            </label>
+            </div>
+        </div>
+    </div>
+    <div>
+        <span id="delete-button">
+            <img src="">
+            <span>Delete Task</span>
+        </span>
+        <span id="save-changes-btn">
+            <img src="./save_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+            <span>Save Changes</span>
+        </span>
+    </div>
+</section>
 </body>
 </html>
