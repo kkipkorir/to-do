@@ -4,153 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>to-do</title>
+    <link href="./main.css" rel="stylesheet" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <section id="first-section">
+    <div class="overall-container">
+    <section id="first-section" class="container">
     <div id="menu-container">
         <div id="menu-bar">
             <h3>Menu</h3>
-            <img src="./menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="menu-icon">
+            <img src="./images/menu_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="menu-icon">
         </div>
-        <div id="search-bar">
-            <input type="text">
-            <img src="./search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+        <div id="search-bar" class="input-group flex-nowrap">
+            <img class="my-2 my-sm-0" src="./images/search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+            <input id="search-bar-input" class="form-control mr-sm-2" type="search">
         </div>
         <div id="task-container">
-            <span>Tasks</span>
-            <div>
-                <div id="upcoming-item">
+            <span id="task-sect-head" class="h5">Tasks</span>
+            <div class="list-group list-group-flush">
+                <div id="upcoming-item" class="menu-tsk-item list-group-item d-flex justify-content-between align-items-start">
                     <div>
-                    <img src="./double_arrow_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                    <img src="./images/double_arrow_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
                     <span>Upcoming</span>
                     </div>
                     <span id="count-upcoming">12</span>
                 </div>
-                <div id="today-item">
+                <div id="today-item" class="menu-tsk-item list-group-item d-flex justify-content-between align-items-start">
                     <div>
-                    <img src="./today_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
-                    <span>Upcoming</span>
+                    <img src="./images/today_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                    <span>Today</span>
                     </div>
                     <span id="count-today">12</span>
                 </div>
-                <div id="calender-item">
+                <div id="calender-item" class="menu-tsk-item list-group-item d-flex justify-content-between align-items-start">
                     <div>
-                    <img src="./calendar_month_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                    <img src="./images/calendar_month_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
                     <span>Calender</span>
                     </div>
                 </div>
-                <div id="stickynote-item">
+                <div id="stickynote-item" class="menu-tsk-item list-group-item d-flex justify-content-between align-items-start">
                     <div>
-                    <img src="./sticky_note_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                    <img src="./images/sticky_note_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
                     <span>Sticky note</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="Category-container">
-            <span>Category</span>
-            <div id="personal-item">
+        <div id="Category-container" class="list-group list-group-flush">
+            <span  class="h5">Category</span>
+            <div id="personal-item" class="menu-tsk-item list-group-item d-flex justify-content-between align-items-start">
                 <div>
-                <img src="./double_arrow_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                <img src="./images/rectangle1-yellow.svg">
                 <span>Personal</span>
                 </div>
                 <span id="count-personal">8</span>
             </div>
-            <div id="work-item">
+            <div id="work-item" class="menu-tsk-item list-group-item d-flex justify-content-between align-items-start">
                 <div>
-                <img src="./today_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                <img src="./images/rectangle2-green.svg">
                 <span>Work</span>
                 </div>
                 <span id="count-work">3</span>
             </div>
-            <button id="add-category">+ Add Category</button>
+            <button id="add-category" class="btn btn-primary">+ Add Category</button>
         </div>
     </div>
-    <div>
+    <div  class="settings-logout">
         <div id="settings">
-            <img src="./logout_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+            <img src="./images/settings_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
             <span>SETTINGS</span>
         </div>
         <div id="log-out">
-            <img src="./logout_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+            <img src="./images/logout_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
             <span >LOG-OUT</span>
         </div>
     </div>
 </section>
-<section id="second-section">
+<section id="second-section" class="container">
     <div id="today">
         <h3>Today</h3>
-        <div><span>3/6 Task Pending</span></div>
-        <button id="add-category">+ Create Task </button>
-        <div id="task-list-container">
-            <label for="list-item1" >
+        <div class="task-pending"><span id="task-pending">3/6 Task Pending</span></div>
+        <div class="add-task list-group list-group-flush"><button id="add-task" class="btn btn-primary">+ Create Task </button></div>
+        <div id="task-list-container" class="task-list list-group list-group-flush">
+            <label for="list-check1" class="list-group-item d-flex justify-content-between align-items-start">
                 <input id="list-check1"type="checkbox"/>
                 <span id="list-span1">Take my dog to the veternary</span>
-                <img src="./chevron_right_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                <img src="./images/chevron_right_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
             </label>
-            <label for="list-item2" >
+            <label for="list-check2" class="task-list list-group-item d-flex justify-content-between align-items-start" >
                 <input id="list-check2"type="checkbox"/>
                 <span id="list-span2">Take my dog to the veternary</span>
-                <img src="./chevron_right_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                <img src="./images/chevron_right_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
             </label>
-            <label for="list-item3" >
+            <label for="list-check3" class="task-list list-group-item d-flex justify-content-between align-items-start">
                 <input id="list-check3"type="checkbox"/>
                 <span id="list-span3">Run around the school</span>
-                <img src="./chevron_right_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+                <img src="./images/chevron_right_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
             </label>
         </div>
     </div>
 </section>
-<section id="third-section">
-    <h3>Task </h3>
-    <div id="task-description">
-        <div id="task-title"><span>Take my dog to the veternary</span></div>
-        <div>
-            <span>Description</span>
-            <textarea id="description-input"></textarea>
+<section id="third-section" class="container">
+    <div id="current-task">
+    <div id="task-editsect-title"><h3>Task</h3></div>
+    <div id="task-title"></div>
+    <div id="title-input"><label for="task-title-input">Title: <input id="task-title-input" type="text"class="form-control"></label></div>
+    <div id="task-description" class="task-list list-group list-group-flush">
+        <div class="description-area menu-tsk-item">
+            <label for="description-input"><span>Description:</span></label>
+            <textarea id="description-input" class="form-control" rows="4"></textarea>
         </div>
-        <div>
+        <div class="list-group-item d-flex justify-content-between align-items-start menu-tsk-item">
             <span>Category</span>
-            <select>
+            <select class="form-control" id="category-selection">
                 <option value="1">personal</option>
             </select>
         </div>
-        <div>
+        <div  class="list-group-item d-flex justify-content-between align-items-start menu-tsk-item">
             <span>Due Date</span>
-            <select>
-                <option value="1"><input type="date"></option>
-            </select>
+            <input id="due-Date" class="form-control" type="date">
         </div>
-        <div>
+        <div  class="list-group-item d-flex justify-content-between align-items-start menu-tsk-item">
             <span>Prioty</span>
-            <select>
+            <select id="priority-selection" class="form-control">
                 <option value="1">High</option>
                 <option value="2">Low</option>
                 <option value="3">Normal</option>
             </select>
         </div>
-        <div id="sub-task container">
-            <span>SubTasks</span>
-            <div>
-                <button id="add-category">+ Create Task </button>
-                <label for="list-item2" >
-                <input id="list-check2"type="checkbox"/>
-                <span id="list-span2">Take my dog to the veternary</span>
-            </label>
+        <div id="sub-task-container"  class="ltask-list list-group list-group-flush menu-tsk-item">
+            <span class="h5">SubTasks</span>
+            <button id="" class="btn btn-primary">+ Add Sub-Task </button>
+            <div id="sub-task-item" class="list-group-item d-flex justify-content-between align-items-start menu-tsk-item"s>
+                <label for="list-check4">
+                <span id="list-span3"><input id="list-check4" type="checkbox"><span>Take Rex to Doc Kelvin</span></span>
+                </label>
             </div>
         </div>
     </div>
-    <div>
+</div>
+    <div class="save-delete">
         <span id="delete-button">
-            <img src="">
+            <img src="./images/save_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
             <span>Delete Task</span>
         </span>
         <span id="save-changes-btn">
-            <img src="./save_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+            <img src="./images/save_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
             <span>Save Changes</span>
         </span>
     </div>
 </section>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="./script.js"></script>
 </body>
 </html>
